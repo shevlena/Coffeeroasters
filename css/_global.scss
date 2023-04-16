@@ -1,0 +1,266 @@
+@font-face {
+    font-family: 'Fraunces 9pt';
+    src:
+        url('../assets/fonts/fraunces-9pt-black.woff2') format('woff2'),
+        url('../assets/fonts/fraunces-9pt-black.woff') format('woff'),
+        url('../assets/fonts/fraunces-9pt-black.ttf') format('truetype');
+}
+
+
+%font-add {
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+}
+
+%flex {
+    display: flex;
+    // margin-left: auto;
+    // margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-basic;
+    background: $bg-color;
+}
+
+h1 {
+    @extend %font-add;
+    font-size: 72px;
+    line-height: 72px;
+}
+
+h2 {
+    @extend %font-add;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+h3 {
+    @extend %font-add;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.btn {
+    padding: 16px 31px;
+    background: $blue;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    @extend %font-add;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FEFCF7;
+    transition: all 0.7s ease 0s;
+
+}
+
+.btn:hover {
+    background: #66D2CF;
+}
+
+
+
+%menu {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: #83888F;
+}
+
+.header {
+    @extend %flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 44px 10px 58px;
+
+    &__menu {
+        @extend %flex;
+
+        &-intention {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        &-item a {
+            @extend %menu;
+            transition: all 0.7s ease 0s;
+        }
+
+        &-item a:hover {
+            color: $text-color-dark;
+        }
+    }
+
+    &__dropdown {
+        display: none;
+    }
+}
+
+
+.footer {
+    background-color: $dark-blue;
+
+    &__box {
+        max-width: 1300px;
+        @extend %flex;
+        margin: 0 auto;
+        justify-content: space-between;
+        padding: 47px 85px;
+    }
+
+    &__menu {
+        @extend %flex;
+        justify-content: start;
+        width: 548px;
+        gap: 32px;
+
+        &-intention {
+            @extend %flex;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        &-item a {
+            @extend %menu;
+            transition: all 0.7s ease 0s;
+        }
+
+        &-item a:hover {
+            color: $text-color-light;
+        }
+    }
+
+    &__icons {
+        @extend %flex;
+        align-items: center;
+        gap: 24px;
+        
+
+        svg:hover {
+            fill: #FDD6BA;
+            transition: all 0.7s ease 0s;
+        }
+
+    }
+    
+}
+
+
+
+@media (max-width: 768px) {
+
+    .header {
+        max-width: 689px;
+    }
+
+    .footer {
+        min-height: 270px;
+        padding: 54px 0 54px;
+
+        &__box {
+            max-width: 283px;
+            min-height: 162px;
+            padding: 0;
+            justify-content: center;
+            align-content: start;
+        }
+
+        &__logo {
+
+            &-link {
+                margin-bottom: 32px;
+            }
+        }
+
+        &__menu {
+
+            &-intention {
+                margin-bottom: 65px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 375px) {
+    
+    .footer {
+        min-height: 346px;
+        padding: 54px 0 54px;
+
+        &__box {
+            max-width: 217px;
+            // min-height: 162px;
+            padding: 0;
+            justify-content: center;
+            align-content: start;
+        }
+        img {
+            width: 217px;
+            height: 24px;
+        }
+
+        &__logo {
+
+            &-link {
+                margin-bottom: 48px;
+            }
+        }
+
+        &__menu {
+            justify-content: center;
+            &-intention {
+            
+                flex-direction: column;
+                margin-bottom: 48px;
+            }
+        }
+    }
+
+}
