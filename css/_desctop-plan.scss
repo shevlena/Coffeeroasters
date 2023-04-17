@@ -1,0 +1,406 @@
+body {
+    position: relative;
+}
+
+// баннер
+
+.bannerplan {
+    background: url(../assets/image/banner_plan.png) no-repeat top;
+    border-radius: 10px;
+    padding: 134px 0 134px 85px;
+    margin-bottom: 166px;
+
+    &__box {
+        max-width: 445px;
+    }
+
+    &__title {
+        color: $text-color-light;
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        color: $text-color-light;
+        text-align: left;
+        opacity: 0.8;
+    }
+}
+
+
+// вибір плану
+
+.orderplan {
+    background-color: #2C343E;
+    height: 653px;
+    border-radius: 10px;
+
+    &__box {
+        max-width: 1300px;
+        @extend %flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 115px 0 0 85px;
+    }
+
+    // оформлення (риска з кружечками)
+
+    &__design {
+        @extend %flex;
+        font-size: 2px;
+        margin-bottom: 67px;
+
+
+        &-strip {
+            width: 755px;
+            height: 2px;
+            background-color: $pink;
+            margin-left: 17px;
+        }
+
+        &-strip::before {
+            content: url(../assets/image/oval_blue.png);
+            position: relative;
+            top: -15px;
+            right: 15px;
+        }
+
+        &-strip::after {
+            content: url(../assets/image/oval_blue.png);
+            position: relative;
+            top: -15px;
+            left: 708px;
+        }
+
+        &-oval {
+            position: relative;
+            left: -390px;
+        }
+    }
+
+    //  кроки плану 1-3
+    &__step {
+        max-width: 1045px;
+        @extend %flex;
+        justify-content: space-around;
+        gap: 95px;
+
+        &-content {
+            max-width: 285px;
+        }
+
+        &-number {
+            color: $pink;
+            margin-bottom: 38px;
+        }
+
+        &-title {
+            max-width: 255px;
+            font-size: 32px;
+            line-height: 36px;
+            color: $bg-color;
+            text-align: left;
+            margin-bottom: 42px;
+        }
+
+        &-text {
+            color: $bg-color;
+            text-align: left;
+        }
+    }
+}
+
+
+// секція вибору замовлення
+.plan {
+    max-width: 1110px;
+    @extend %flex;
+    justify-content: space-around;
+    padding-top: 168px;
+    align-items: start;
+
+    &__menu {
+
+        &-info {
+            @extend %flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0;
+            gap: 24px;
+            list-style: none;
+        }
+
+        &-item {
+            width: 255px;
+            padding-bottom: 24px;
+            color: #83888F;
+            border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+
+        }
+
+        span {
+            @extend %font-add;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        &-number {
+            margin-right: 24px;
+
+        }
+
+        &-title {}
+
+        a {
+            color: $text-color-dark;
+            opacity: 0.4;
+        }
+
+        .end {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        a:hover {
+            color: $text-color-dark;
+            opacity: 0.6;
+            transition: all 0.7s ease 0s;
+        }
+
+    }
+}
+
+
+
+
+
+.menu {
+
+    &__content {
+        max-width: 730px;
+    }
+}
+
+.preferences,
+.beantype,
+.quantity,
+.grindoption,
+.deliveries {
+
+    &__question {
+        margin-top: 0;
+    }
+
+    &__cards {
+        @extend %flex;
+        justify-content: space-between;
+        margin-top: 56px;
+
+        &-item {
+            max-width: 227px;
+            min-height: 250px;
+            padding: 32px 28px 84px 28px;
+            background: #F4F1EB;
+            border-radius: 8px;
+            transition: all 0.7s ease 0s;
+        }
+
+        &-title {
+            margin-bottom: 24px;
+            color: $text-color-dark;
+        }
+
+        &-text {
+            text-align: left;
+            color: $text-color-dark;
+        }
+    }
+}
+
+
+.light:hover {
+    background: $pink;
+    cursor: pointer;
+}
+
+
+.dark {
+    background: $blue;
+}
+
+.dark h3 {
+    color: #FFFFFF;
+}
+
+.dark p {
+    color: #FFFFFF;
+}
+
+.blok {
+    padding-bottom: 88px;
+}
+
+.title {
+    max-width: 730px;
+    @extend %flex;
+    justify-content: space-between;
+    color: #83888F;
+}
+
+
+
+
+.beantype {
+
+    &__question_img {
+        transform: rotate(180deg);
+    }
+
+    &__cards {
+        display: none;
+    }
+}
+
+.quantity {
+
+    &__question_img {
+        transform: rotate(180deg);
+    }
+
+    &__cards {
+        display: none;
+    }
+}
+
+.grindoption {
+
+    &__question_img {
+        transform: rotate(180deg);
+    }
+
+    &__cards {
+        display: none;
+    }
+}
+
+.deliveries {
+
+    &__question_img {
+        transform: rotate(180deg);
+    }
+
+    &__cards {
+        display: none;
+    }
+}
+
+
+.summary {
+    background: #2C343E;
+    border-radius: 10px;
+    padding: 47px 64px;
+
+    &-title {
+        text-align: left;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        margin-bottom: 8px;
+    }
+
+    &-text {
+        line-height: 40px;
+        color: #FFFFFF;
+    }
+
+    span {
+        color: #0E8784;
+    }
+}
+
+.fill {
+    display: none;
+}
+
+.right {
+    width: 217px;
+    background: #E2DEDB;
+    margin-top: 40px;
+    float: right;
+    margin-bottom: 168px;
+}
+
+.right:hover {
+    background: #E2DEDB;
+}
+
+.arrow {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+.overlay {
+    background-color: rgb(0, 0, 0, 50%);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    @extend %flex;
+    display: none;
+
+    &__modal {
+        background-color: $bg-color;
+        border-radius: 10px 10px 0px 0px;
+        width: 540px;
+        height: 597px;
+    }
+
+    &__title {
+        background: $text-color-dark;
+        color: #fff;
+        border-radius: 8px 8px 0px 0px;
+        padding: 48px 148px 40px 56px;
+    }
+
+    &__content {
+        padding: 57px 56px 47px 56px;
+        color: #83888F;
+    }
+
+    &__content span {
+        color: $blue;
+    }
+
+    p {
+        color: $text-color-dark;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+        text-align: left;
+    }
+
+
+    &__buy {
+        padding-left: 56px;
+        @extend %flex;
+        gap: 19px;
+        justify-content: start;
+
+        h3 {
+            color: $text-color-dark;
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        .btn {
+            width: 217px;
+            height: 56px;
+        }
+
+    }
+
+    .big {
+        display: none;
+    }
+}
