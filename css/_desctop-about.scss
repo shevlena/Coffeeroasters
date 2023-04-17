@@ -1,0 +1,128 @@
+.bannerabout {
+    background: url(../assets/image/banner_about.jpg) no-repeat top;
+    border-radius: 10px;
+    padding: 137px 0 137px 85px;
+    margin-bottom: 168px;
+
+    &__box {
+        max-width: 445px;
+    }
+
+    &__title {
+        color: $text-color-light;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        color: $text-color-light;
+        text-align: left;
+    }
+}
+
+
+.duty {
+    background: url(../assets/image/duty.jpg) no-repeat;
+    max-width: 1110px;
+    height: 520px;
+    @extend %flex;
+    justify-content: end;
+    margin-bottom: 256px;
+
+    &__box {
+        max-width: 540px;
+        @extend %flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    &__title {
+        color: $text-color-dark;
+    }
+
+    &__text {
+        text-align: left;
+        color: $text-color-dark;
+    }
+}
+
+
+
+
+.quality {
+    height: 474px;
+    background: $dark-blue;
+    border-radius: 10px;
+    @extend %flex;
+    align-content: flex-start;
+
+    &__box {
+        width: 1110px;
+        padding-top: 88px;
+    }
+
+    &__title {
+        color: $bg-color;
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        max-width: 540px;
+        text-align: left;
+        color: $bg-color;
+    }
+
+    &__foto {
+        width: 445px;
+        height: 474px;
+        background: url(../assets/image/quality.png);
+        position: absolute;
+        transform: translate(665px, -176px);
+    }
+}
+
+.orderabout {
+    max-width: 1110px;
+    @extend %flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 168px 0;
+
+    &-title {
+        color: #83888F;
+        margin-bottom: 80px;
+        text-align: start;
+        margin-bottom: 72px;
+    }
+
+    &__step {
+        max-width: 1045px;
+        @extend %flex;
+        justify-content: space-around;
+        gap: 95px;
+        padding: 0;
+        margin-bottom: 64px;
+
+        &-content {
+            width: 285px;
+        }
+
+        img {
+            margin-bottom: 46px;
+        }
+
+        &-title {
+            font-size: 32px;
+            line-height: 36px;
+            color: $text-color-dark;
+            text-align: left;
+            margin-bottom: 42px;
+            margin-bottom: 24px;
+        }
+
+        &-text {
+            color: $text-color-dark;
+            text-align: left;
+        }
+    }
+}
